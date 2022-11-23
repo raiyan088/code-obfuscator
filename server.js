@@ -8,6 +8,10 @@ app.listen(process.env.PORT || 3000, () => {
     console.log('Listening on port 3000 ...')
 })
 
+app.get('/earn', async function (req, res) {
+    await obfuscator(0, res)
+})
+
 app.get('/child', async function (req, res) {
     await obfuscator(1, res)
 })
